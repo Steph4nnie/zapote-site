@@ -179,7 +179,7 @@
   </footer>
 
   <script>
-  function mostrarSeccion(id) {
+   function mostrarSeccion(id) {
     const secciones = document.querySelectorAll(".section");
     secciones.forEach(seccion => {
       seccion.classList.remove("activa");
@@ -192,17 +192,24 @@
   document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelectorAll(".nav-menu a");
 
+    // Abrir/cerrar el menú al hacer clic en el icono hamburguesa
     hamburger.addEventListener("click", () => {
       navMenu.classList.toggle("active");
     });
 
+    // Cerrar el menú cuando se hace clic en cualquier enlace
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+    });
+
+    // Mostrar la sección de inicio al cargar
     mostrarSeccion('inicio');
   });
- 
-    window.onload = () => {
-      mostrarSeccion('inicio');
-    };
+
   </script>
 </body>
 </html>
