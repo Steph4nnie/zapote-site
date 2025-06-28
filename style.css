@@ -312,5 +312,35 @@
       .clientes img:hover {
         filter: grayscale(0%);
       }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+      }
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+        .hamburger {
+          display: flex;
+          margin-left: auto;
+        }
+        .social-icons-nav {
+          margin-top: 10px;
+          display: flex;
+        }
+      }
       
     }
