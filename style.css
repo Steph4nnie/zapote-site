@@ -293,6 +293,9 @@
 
   .nav-menu.active {
     display: flex;
+   background-color: #4CAF50; 
+   padding: 10px;
+     border-radius: 5px;
   }
 
   .nav-menu li {
